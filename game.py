@@ -71,10 +71,13 @@ class DiningRoom(Room):
     super(DiningRoom, self).__init__("Dining Room (" + str(column) + "," + str(row) +")", "This is the dining room, you see a huge table. There are very expensive paintings on the wall and two doors. You can go east or west.", row, column, total_rows, total_columns)
 class DarkRoom(Room):
   def __init__(self, row, column, total_rows, total_columns):
-    super(DarkRoom, self).__init__("Dark Room (" + str(column) + "," + str(row) +")", "This is the dark room, you see a large collection of previous visitors. There are two doors, you can go north and south.", row, column, total_rows, total_columns)
+    super(DarkRoom, self).__init__("Dark Room (" + str(column) + "," + str(row) +")", "This is the dark room, you see a large collection of photos of previous visitors. There are two doors, you can go north and south.", row, column, total_rows, total_columns)
+class WineCellar(Room):
+  def __init__(self, row, column, total_rows, total_columns):
+    super(WineCellar, self).__init__("Wine Cellar (" + str(column) + "," + str(row) +")", "This is wine cellar, the walls look like a medieval castle. On the east wall, you spot a key wrapped around an old bottle. You can go west or north.", row, column, total_rows, total_columns)
 class Basement(Room):
   def __init__(self, row, column, total_rows, total_columns):
-    super(Basement, self).__init__("Basement (" + str(column) + "," + str(row) +")", "This is the basement, you see empty boxes and cages. There is a weird smell in the air and a weird door to the west. You can go west or south.", row, column, total_rows, total_columns)
+    super(Basement, self).__init__("Basement (" + str(column) + "," + str(row) +")", "This is the basement, you see empty boxes and cages. There is a dust and a wierd smell in the air. There is an old door to the west that seems to be locked and another door on the east that is unlocked.", row, column, total_rows, total_columns)
 class Dungeon(Room):
   def _init_(self, row, column, total_rows, total_columns):
     super(Dungeon, self).__init__("Dungeon(" + str(column) + "," + str(row) +")", "You took a wrong turn and wound up in the dungeon. GAME OVER", row, column, total_rows, total_columns)
