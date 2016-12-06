@@ -1,7 +1,7 @@
 from random import randint
 
 def welcome_message():
-  printNow("Welcome to Bitspice Island!")
+  showInformation("Welcome to Bitspice Island!")
   
 def help_message():
   printNow("""In each room you will be told which directions you can go
