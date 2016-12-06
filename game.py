@@ -1,10 +1,10 @@
 from random import randint
 
 def welcome_message():
-  printNow("Welcome to Bitspice Island!")
+  showInformation("Welcome to Bitspice Island!")
   
 def help_message():
-  printNow("""In each room you will be told which directions you can go
+  showInformation("""In each room you will be told which directions you can go
 You'll be able to go north, south, east or west by typing that direction
 Type pickup to pick up an item, you need to type the name exactly, including capitalization.
 Type help to redisplay this introduction
