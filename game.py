@@ -5,10 +5,18 @@ def welcome_message():
   
 def help_message():
   printNow("""In each room you will be told which directions you can go
+along with items and things you can do along with a bit of information.
 You'll be able to go north, south, east or west by typing that direction
-Type pickup to pick up an item, you need to type the name exactly, including capitalization.
-Type help to redisplay this introduction
-Type exit to quit at any time""")
+
+'go [direction]'
+   - Go in the direction chosen. This will move you in the direction chosen. Ex. 'go east' will make you go east from your current location.
+'pickup [item_name]'
+   - Pick up an item, you need to type the name exactly, including capitalization.
+'help'
+   - Prints out this help message
+'exit'
+   - Immediately quits the game, no saving.
+""")
 
 def command_parser(command):
   # We try not to keep state here, we just process the commands so we can better handle them in the main loop.
@@ -221,13 +229,13 @@ while(True):
       # If everything checks out, the new room is hte current room, and we repeat.
       current_room = new_room
     else:
-      printNow("\nInvalid direction, please try again.\n")
+      printNow("\n[WARNING] Invalid direction, please try again.\n")
   if result[0] == 'pickup':
     # Straightfoward pickup, most remove functions in languages return the removed item, we do the same here, so we can put it in the inventory.
     # If its invalid, just print a message saying so, and skip the adding to inventory step.
     item = current_room.remove_item(result[1])
     if item == "invalid":
-      printNow("\nYou entered an invalid item name, try again.\n")
+      printNow("\n[WARNING} You entered an invalid item name, try again.\n")
     else:
       player_inventory = player_inventory + [item]
   # If they type exit, quit.
